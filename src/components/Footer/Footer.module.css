@@ -1,0 +1,231 @@
+.footer {
+  padding: 80px 0 40px 0;
+  background-color: #01000b;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  position: relative;
+  z-index: 5;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 48px;
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.logoText {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+
+.slogan {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+.linksCol {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.colTitle {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.linksList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footerLink {
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.footerLink:hover {
+  color: #00d9ff;
+  padding-left: 2px;
+}
+
+.newsletterCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.newsletterDesc {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.newsletterForm {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-xs);
+  overflow: hidden;
+  padding: 4px;
+  transition: var(--transition-fast);
+}
+
+.newsletterForm:focus-within {
+  border-color: rgba(0, 102, 255, 0.4);
+  box-shadow: 0 0 10px rgba(0, 102, 255, 0.1);
+}
+
+.newsletterInput {
+  flex: 1;
+  background: none;
+  border: none;
+  color: #ffffff;
+  padding: 8px 12px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+}
+
+.newsletterBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-xs);
+  background-color: #0066ff;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.newsletterBtn:hover {
+  background-color: #0052cc;
+}
+
+.bottomBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 64px;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  padding-top: 32px;
+}
+
+.copy {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--text-dark);
+}
+
+.legalLinks {
+  display: flex;
+  gap: 24px;
+}
+
+.legalLink {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--text-dark);
+  transition: var(--transition-fast);
+}
+
+.legalLink:hover {
+  color: #ffffff;
+}
+
+/* WhatsApp Floating FAB */
+.whatsappFab {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #25d366;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35);
+  transition: var(--transition-fast);
+  z-index: 90;
+  animation: bounceFAB 3s infinite ease-in-out;
+}
+
+.whatsappFab:hover {
+  animation: none;
+  transform: scale(1.1) translateY(-4px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+  color: #ffffff;
+}
+
+@keyframes bounceFAB {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 0 30px 0;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .bottomBar {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 48px;
+    align-items: flex-start;
+  }
+  .whatsappFab {
+    bottom: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+  }
+}

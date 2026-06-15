@@ -1,0 +1,191 @@
+.scrollSection {
+  position: relative;
+  height: 250vh; /* Determines length of horizontal scroll track */
+  background-color: #030014;
+  z-index: 5;
+}
+
+.stickyContainer {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.headerContainer {
+  margin-bottom: 50px;
+}
+
+.header {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tagline {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: #00d9ff;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 600px;
+}
+
+.scrollTrack {
+  position: relative;
+  padding-left: calc((100vw - 1200px) / 2 + 24px); /* Align with main container start */
+}
+
+/* Fallback for wide screens */
+@media (max-width: 1248px) {
+  .scrollTrack {
+    padding-left: 24px;
+  }
+}
+
+.horizontalTrack {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+}
+
+.stepCard {
+  width: 360px;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 0.012);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-md);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease;
+}
+
+.stepCard:hover {
+  border-color: rgba(0, 102, 255, 0.2);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stepNum {
+  font-family: var(--font-mono);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #00d9ff;
+  text-shadow: 0 0 10px rgba(0, 217, 255, 0.2);
+  line-height: 1;
+}
+
+.stepDivider {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(0, 217, 255, 0.2) 0%, transparent 100%);
+}
+
+.stepTitle {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.stepDesc {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+.stepDetails {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+  padding-top: 20px;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.bullet {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #0066ff;
+  flex-shrink: 0;
+  box-shadow: 0 0 4px #0066ff;
+}
+
+/* Responsive: Fallback to vertical flow on mobile Devices */
+@media (max-width: 900px) {
+  .scrollSection {
+    height: auto;
+    padding: 80px 0;
+  }
+  
+  .stickyContainer {
+    position: relative;
+    height: auto;
+    overflow: visible;
+  }
+  
+  .headerContainer {
+    margin-bottom: 40px;
+  }
+  
+  .scrollTrack {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  
+  .horizontalTrack {
+    flex-direction: column;
+    width: 100%;
+    transform: none !important; /* Overrides Framer Motion animation values */
+    gap: 24px;
+  }
+  
+  .stepCard {
+    width: 100%;
+    padding: 32px 24px;
+  }
+}

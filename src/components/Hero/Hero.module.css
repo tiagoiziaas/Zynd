@@ -1,0 +1,463 @@
+.heroSection {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 150px 0 100px 0;
+  z-index: 1;
+}
+
+.heroContainer {
+  position: relative;
+  z-index: 10;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 102, 255, 0.08);
+  border: 1px solid rgba(0, 102, 255, 0.15);
+  padding: 8px 16px;
+  border-radius: 40px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #00d9ff;
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+}
+
+.badgeIcon {
+  color: #00d9ff;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: 3.85rem;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 38px;
+  max-width: 620px;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+}
+
+.primaryBtn {
+  background: linear-gradient(90deg, #0066ff 0%, #00d9ff 100%);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 15px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 20px rgba(0, 102, 255, 0.3);
+  transition: var(--transition-fast);
+}
+
+.primaryBtn:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.secondaryBtn {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 15px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.secondaryBtn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.visualBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px;
+}
+
+.perspectiveWrapper {
+  position: relative;
+  transform-style: preserve-3d;
+  width: 100%;
+  height: 380px;
+}
+
+.floatingCard {
+  position: absolute;
+  background: rgba(10, 10, 25, 0.45);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  transition: var(--transition-smooth);
+}
+
+.floatingCard:hover {
+  border-color: rgba(0, 102, 255, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 102, 255, 0.15);
+}
+
+.mainCard {
+  width: 320px;
+  height: 200px;
+  top: 30px;
+  left: 10px;
+  transform: translateZ(30px);
+  z-index: 2;
+}
+
+.subCard {
+  width: 240px;
+  height: 190px;
+  bottom: 20px;
+  right: 10px;
+  transform: translateZ(60px);
+  z-index: 3;
+  padding: 20px;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 16px 20px;
+}
+
+.iconCircle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(0, 102, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconCircleGreen {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 217, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00d9ff;
+}
+
+.iconBlue {
+  color: #0066ff;
+}
+
+.cardHeaderInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeaderInfo h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.pulseTag {
+  font-size: 0.6rem;
+  font-family: var(--font-mono);
+  color: #10b981;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.pulseTag::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+  animation: pulseGreen 1.5s infinite;
+}
+
+.cardBody {
+  padding: 18px 20px;
+}
+
+.codeLine {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.keyword {
+  color: #00d9ff;
+}
+
+.variable {
+  color: #f43f5e;
+}
+
+.class {
+  color: #38bdf8;
+}
+
+.method {
+  color: #10b981;
+}
+
+.string {
+  color: #fbbf24;
+}
+
+.statusIndicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.spinner {
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(0, 102, 255, 0.1);
+  border-top-color: #0066ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.cardHeader h5 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.metricRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 16px;
+}
+
+.subCardMetric {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.subCardChange {
+  font-size: 0.65rem;
+  color: #10b981;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.miniChart {
+  display: flex;
+  gap: 5px;
+  height: 44px;
+  align-items: flex-end;
+  margin-top: 18px;
+}
+
+.bar {
+  flex: 1;
+  background: rgba(0, 102, 255, 0.15);
+  border-radius: 2px;
+  transition: var(--transition-fast);
+}
+
+.bar:hover {
+  background: #00d9ff;
+  box-shadow: 0 0 8px rgba(0, 217, 255, 0.4);
+}
+
+.metricsBar {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  background: rgba(255, 255, 255, 0.01);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  margin-top: 90px;
+}
+
+.metricItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+
+.metricItem:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -16px;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+}
+
+.metricValue {
+  font-family: var(--font-display);
+  font-size: 2.85rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 15px rgba(0, 102, 255, 0.1);
+  letter-spacing: -0.02em;
+}
+
+.metricLabel {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* Animations */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulseGreen {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 1100px) {
+  .headline {
+    font-size: 3.2rem;
+  }
+  .metricValue {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .visualBlock {
+    height: 380px;
+  }
+  .perspectiveWrapper {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .textBlock {
+    align-items: center;
+    text-align: center;
+  }
+  .subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .actions {
+    justify-content: center;
+  }
+  .metricsBar {
+    flex-direction: column;
+    gap: 28px;
+    padding: 24px;
+  }
+  .metricItem:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .headline {
+    font-size: 2.45rem;
+  }
+  .floatingCard {
+    max-width: 100%;
+  }
+  .mainCard {
+    width: 280px;
+    left: 0;
+  }
+  .subCard {
+    width: 200px;
+    right: 0;
+  }
+  .actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+  }
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}
