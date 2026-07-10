@@ -1,0 +1,208 @@
+/* ─── Card Shell ───────────────────────────────────────────── */
+.card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  cursor: default;
+  overflow: hidden;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+  will-change: transform;
+  height: 100%;
+}
+
+.card:hover {
+  border-color: var(--border-card-glow);
+  box-shadow:
+    0 0 0 1px rgba(0, 102, 255, 0.12),
+    0 20px 60px rgba(0, 102, 255, 0.1),
+    0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.featured {
+  border-color: rgba(0, 102, 255, 0.2);
+  background: linear-gradient(135deg, rgba(0, 102, 255, 0.05) 0%, rgba(0, 217, 255, 0.03) 100%);
+}
+
+/* ─── Mouse Glow ─────────────────────────────────────────────── */
+.mouseGlow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: inherit;
+  transition: opacity 0.3s;
+}
+
+/* ─── Scanlines ──────────────────────────────────────────────── */
+.scanlines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.012) 2px,
+    rgba(255, 255, 255, 0.012) 4px
+  );
+  border-radius: inherit;
+}
+
+/* ─── Top Bar ─────────────────────────────────────────────────── */
+.cardTop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.langBadge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
+.langDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--lang-color, #8b949e);
+  flex-shrink: 0;
+}
+
+.featuredBadge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: #f7c948;
+  background: rgba(247, 201, 72, 0.1);
+  border: 1px solid rgba(247, 201, 72, 0.2);
+  padding: 3px 8px;
+  border-radius: 20px;
+  letter-spacing: 0.02em;
+}
+
+.cardLinks {
+  margin-left: auto;
+  display: flex;
+  gap: 6px;
+}
+
+.iconLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: var(--transition-fast);
+  text-decoration: none;
+}
+
+.iconLink:hover {
+  color: #ffffff;
+  background: rgba(0, 102, 255, 0.15);
+  border-color: rgba(0, 102, 255, 0.3);
+}
+
+/* ─── Content ─────────────────────────────────────────────────── */
+.projectName {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.3;
+  position: relative;
+  z-index: 2;
+  letter-spacing: -0.01em;
+}
+
+.projectDesc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ─── Topics ─────────────────────────────────────────────────── */
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  position: relative;
+  z-index: 2;
+}
+
+.topic {
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: #00d9ff;
+  background: rgba(0, 217, 255, 0.07);
+  border: 1px solid rgba(0, 217, 255, 0.15);
+  padding: 3px 9px;
+  border-radius: 20px;
+  letter-spacing: 0.03em;
+}
+
+/* ─── Footer Stats ───────────────────────────────────────────── */
+.cardFooter {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  position: relative;
+  z-index: 2;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.statMuted {
+  margin-left: auto;
+  color: var(--text-dark);
+}
+
+/* ─── Bottom Glow Line ───────────────────────────────────────── */
+.bottomGlow {
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 102, 255, 0.5), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.card:hover .bottomGlow {
+  opacity: 1;
+}

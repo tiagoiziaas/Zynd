@@ -13,6 +13,7 @@ import Results from "@/components/Results/Results";
 import Process from "@/components/Process/Process";
 import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
+import Portfolio from "@/components/Portfolio/Portfolio";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -83,6 +84,7 @@ export default function Home() {
             <ValueProps />
             <Differentials />
             <Results />
+            <Portfolio />
             <Process />
             <Contact />
           </main>

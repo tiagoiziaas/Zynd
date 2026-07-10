@@ -11,6 +11,7 @@ const NAV_ITEMS = [
   { id: "solutions", label: "Soluções" },
   { id: "differentials", label: "Diferenciais" },
   { id: "results", label: "Resultados" },
+  { id: "portfolio", label: "Portfólio" },
   { id: "process", label: "Processo" },
 ];
 
