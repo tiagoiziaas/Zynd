@@ -39,11 +39,17 @@ export async function PUT(req: NextRequest) {
 
   const projects = getProjects();
   const idx = projects.findIndex((p) => p.githubId === githubId);
-  if (idx === -1) return NextResponse.json({ error: "Project not found" }, { status: 404 });
-
-  projects[idx] = { ...projects[idx], ...updates };
-  saveProjects(projects);
-  return NextResponse.json(projects[idx]);
+  try {
+    if (idx === -1) return NextResponse.json({ error: "Project not found" }, { status: 404 });
+    projects[idx] = { ...projects[idx], ...updates };
+    saveProjects(projects);
+    return NextResponse.json(projects[idx]);
+  } catch (err: any) {
+    return NextResponse.json(
+      { error: `Internal server error: ${err?.message || err}` },
+      { status: 500 }
+    );
+  }
 }
 
 // DELETE – remove a project

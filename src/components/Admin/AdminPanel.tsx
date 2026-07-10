@@ -210,13 +210,41 @@ export default function AdminPanel({ password }: AdminPanelProps) {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
           >
-            {syncMsg.text}
+            <span style={{ wordBreak: "break-word" }}>{syncMsg.text}</span>
             <button className={styles.dismissBtn} onClick={() => setSyncMsg(null)}>
               <X size={12} />
             </button>
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Production Warning Alert */}
+      {typeof window !== "undefined" && window.location.hostname !== "localhost" && (
+        <div style={{
+          background: "rgba(0, 102, 255, 0.05)",
+          border: "1px solid rgba(0, 102, 255, 0.2)",
+          borderRadius: "12px",
+          padding: "16px 20px",
+          fontSize: "0.85rem",
+          color: "#adadad",
+          lineHeight: "1.5",
+          display: "flex",
+          flexDirection: "column",
+          gap: "8px"
+        }}>
+          <strong style={{ color: "#ffffff", display: "flex", alignItems: "center", gap: "6px" }}>
+            ℹ️ Sincronização em Produção (Netlify)
+          </strong>
+          <span>
+            A Netlify possui um sistema de arquivos **somente leitura** em produção. Para sincronizar e salvar projetos:
+          </span>
+          <ol style={{ paddingLeft: "20px", display: "flex", flexDirection: "column", gap: "4px" }}>
+            <li>Rode o projeto localmente no seu computador (com <code>npm run dev</code>).</li>
+            <li>Acesse o painel local em <a href="http://localhost:3000/admin" target="_blank" rel="noopener noreferrer" style={{ color: "#00d9ff", textDecoration: "underline" }}>localhost:3000/admin</a> e faça o Sync.</li>
+            <li>Faça o <strong>commit e push</strong> do arquivo <code>src/data/portfolio.json</code> atualizado para o GitHub.</li>
+          </ol>
+        </div>
+      )}
 
       {/* Project List */}
       {loading ? (

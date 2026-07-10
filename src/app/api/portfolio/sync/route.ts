@@ -109,8 +109,11 @@ export async function POST(req: NextRequest) {
       synced: projects.length,
       projects,
     });
-  } catch (err) {
+  } catch (err: any) {
     console.error("Sync error:", err);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    return NextResponse.json(
+      { error: `Internal server error: ${err?.message || err}` },
+      { status: 500 }
+    );
   }
 }
