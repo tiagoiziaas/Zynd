@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Github, Search, Filter } from "lucide-react";
+import { Search, Filter } from "lucide-react";
+import Github from "@/components/ui/GithubIcon";
 import Link from "next/link";
 import ProjectCard, { type Project } from "@/components/Portfolio/ProjectCard";
 import styles from "./page.module.css";

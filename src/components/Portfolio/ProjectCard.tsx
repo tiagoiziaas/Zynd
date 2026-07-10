@@ -2,7 +2,8 @@
 
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { Star, GitFork, ExternalLink, Github, Clock } from "lucide-react";
+import { Star, GitFork, ExternalLink, Clock } from "lucide-react";
+import Github from "@/components/ui/GithubIcon";
 import styles from "./ProjectCard.module.css";
 
 export interface Project {

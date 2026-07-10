@@ -3,10 +3,11 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Github, RefreshCw, Eye, EyeOff, Star, GitFork,
+  RefreshCw, Eye, EyeOff, Star, GitFork,
   Trash2, Edit3, Check, X, Lock, Zap, ExternalLink,
   ChevronUp, ChevronDown,
 } from "lucide-react";
+import Github from "@/components/ui/GithubIcon";
 import styles from "./AdminPanel.module.css";
 
 interface Project {

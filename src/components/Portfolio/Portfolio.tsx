@@ -2,7 +2,8 @@
 
 import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Layers } from "lucide-react";
+import { ArrowRight, Layers } from "lucide-react";
+import Github from "@/components/ui/GithubIcon";
 import Link from "next/link";
 import ProjectCard, { type Project } from "./ProjectCard";
 import styles from "./Portfolio.module.css";
