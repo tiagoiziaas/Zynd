@@ -12,7 +12,7 @@
   left: -10%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(0, 102, 255, 0.03) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(99, 224, 74, 0.03) 0%, transparent 70%);
   filter: blur(45px);
   pointer-events: none;
   z-index: 1;
@@ -22,7 +22,7 @@
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 80px;
-  align-items: center;
+  align-items: start;
 }
 
 .infoCol {
@@ -38,7 +38,7 @@
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.2em;
-  color: #00d9ff;
+  color: #8cff6b;
   margin-bottom: 16px;
   text-transform: uppercase;
 }
@@ -76,9 +76,9 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(0, 102, 255, 0.05);
-  border: 1px solid rgba(0, 102, 255, 0.12);
-  color: #0066ff;
+  background: rgba(99, 224, 74, 0.05);
+  border: 1px solid rgba(99, 224, 74, 0.12);
+  color: #63e04a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,7 +103,7 @@
 }
 
 .detailValue:hover {
-  color: #00d9ff;
+  color: #8cff6b;
 }
 
 .formCol {
@@ -150,8 +150,8 @@
 }
 
 .inputWrapper:focus-within {
-  border-color: rgba(0, 102, 255, 0.4);
-  box-shadow: 0 0 10px rgba(0, 102, 255, 0.15);
+  border-color: rgba(99, 224, 74, 0.4);
+  box-shadow: 0 0 10px rgba(99, 224, 74, 0.15);
   background-color: rgba(255, 255, 255, 0.03);
 }
 
@@ -204,7 +204,7 @@
 }
 
 .submitBtn {
-  background: linear-gradient(90deg, #0066ff 0%, #00d9ff 100%);
+  background: linear-gradient(90deg, #63e04a 0%, #8cff6b 100%);
   color: #ffffff;
   font-family: var(--font-sans);
   font-size: 0.95rem;
@@ -217,7 +217,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  box-shadow: 0 4px 15px rgba(0, 102, 255, 0.25);
+  box-shadow: 0 4px 15px rgba(99, 224, 74, 0.25);
 }
 
 .submitBtn:hover {

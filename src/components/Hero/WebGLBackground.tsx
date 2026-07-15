@@ -63,17 +63,17 @@ export default function WebGLBackground() {
         
         // Color definitions
         vec3 darkBackground = vec3(0.011, 0.0, 0.078); // #030014
-        vec3 enterpriseBlue = vec3(0.0, 0.4, 1.0);     // #0066ff
-        vec3 lightCyan = vec3(0.0, 0.85, 1.0);        // #00d9ff
-        
+        vec3 targetGreen = vec3(0.388, 0.878, 0.290);  // #63e04a
+        vec3 neonGreen = vec3(0.549, 1.0, 0.420);      // #8cff6b
+
         // Blend colors based on noise values
-        vec3 finalColor = mix(darkBackground, enterpriseBlue, n1 * 0.6);
-        finalColor = mix(finalColor, lightCyan, n2 * 0.25);
-        
+        vec3 finalColor = mix(darkBackground, targetGreen, n1 * 0.6);
+        finalColor = mix(finalColor, neonGreen, n2 * 0.25);
+
         // Add subtle overlay glow at the bottom center
         float bottomGlow = 1.0 - distance(uv, vec2(0.5, 0.0));
         bottomGlow = clamp(bottomGlow, 0.0, 1.0);
-        finalColor += enterpriseBlue * pow(bottomGlow, 3.0) * 0.35;
+        finalColor += targetGreen * pow(bottomGlow, 3.0) * 0.35;
 
         gl_FragColor = vec4(finalColor, 1.0);
       }

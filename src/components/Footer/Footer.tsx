@@ -33,8 +33,8 @@ export default function Footer() {
                   <path d="M30 35 H70 L30 65 H70" stroke="#ffffff" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" />
                   <defs>
                     <linearGradient id="footerLogoGradient" x1="0" y1="0" x2="100" y2="100">
-                      <stop offset="0%" stopColor="#0066ff" />
-                      <stop offset="100%" stopColor="#00d9ff" />
+                      <stop offset="0%" stopColor="#63e04a" />
+                      <stop offset="100%" stopColor="#8cff6b" />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -54,6 +54,7 @@ export default function Footer() {
                 <li><button onClick={() => handleNavClick("differentials")} className={styles.footerLink}>Diferenciais</button></li>
                 <li><button onClick={() => handleNavClick("results")} className={styles.footerLink}>Resultados</button></li>
                 <li><button onClick={() => handleNavClick("process")} className={styles.footerLink}>Processo</button></li>
+                <li><button onClick={() => handleNavClick("about")} className={styles.footerLink}>Sobre</button></li>
               </ul>
             </div>
 

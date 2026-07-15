@@ -118,7 +118,7 @@
   background-color: transparent;
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 20px rgba(0, 102, 255, 0.15);
+  box-shadow: 0 0 20px rgba(99, 224, 74, 0.15);
 }
 
 .mobileMenuToggle {
@@ -186,13 +186,13 @@
 }
 
 .mobileActive {
-  color: #00d9ff;
-  border-bottom-color: rgba(0, 217, 255, 0.2);
+  color: #8cff6b;
+  border-bottom-color: rgba(140, 255, 107, 0.2);
 }
 
 .mobileCtaBtn {
   width: 100%;
-  background: linear-gradient(90deg, #0066ff 0%, #00d9ff 100%);
+  background: linear-gradient(90deg, #63e04a 0%, #8cff6b 100%);
   color: #ffffff;
   font-family: var(--font-sans);
   font-size: 1rem;
@@ -202,7 +202,7 @@
   cursor: pointer;
   text-align: center;
   transition: var(--transition-fast);
-  box-shadow: 0 4px 20px rgba(0, 102, 255, 0.25);
+  box-shadow: 0 4px 20px rgba(99, 224, 74, 0.25);
 }
 
 .mobileCtaBtn:hover {

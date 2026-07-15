@@ -221,8 +221,8 @@ export default function AdminPanel({ password }: AdminPanelProps) {
       {/* Production Warning Alert */}
       {typeof window !== "undefined" && window.location.hostname !== "localhost" && (
         <div style={{
-          background: "rgba(0, 102, 255, 0.05)",
-          border: "1px solid rgba(0, 102, 255, 0.2)",
+          background: "rgba(99, 224, 74, 0.05)",
+          border: "1px solid rgba(99, 224, 74, 0.2)",
           borderRadius: "12px",
           padding: "16px 20px",
           fontSize: "0.85rem",
@@ -240,7 +240,7 @@ export default function AdminPanel({ password }: AdminPanelProps) {
           </span>
           <ol style={{ paddingLeft: "20px", display: "flex", flexDirection: "column", gap: "4px" }}>
             <li>Rode o projeto localmente no seu computador (com <code>npm run dev</code>).</li>
-            <li>Acesse o painel local em <a href="http://localhost:3000/admin" target="_blank" rel="noopener noreferrer" style={{ color: "#00d9ff", textDecoration: "underline" }}>localhost:3000/admin</a> e faça o Sync.</li>
+            <li>Acesse o painel local em <a href="http://localhost:3000/admin" target="_blank" rel="noopener noreferrer" style={{ color: "#8cff6b", textDecoration: "underline" }}>localhost:3000/admin</a> e faça o Sync.</li>
             <li>Faça o <strong>commit e push</strong> do arquivo <code>src/data/portfolio.json</code> atualizado para o GitHub.</li>
           </ol>
         </div>

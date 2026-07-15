@@ -4,19 +4,20 @@
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Roboto Mono, monospace;
   --font-display: "Cal Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-  /* Color Palette - Enterprise Blue & Deep Dark */
+  /* Color Palette - Target Locked Green & Deep Dark (aligned with alvo-localizado.svg) */
   --bg-main: #030014; /* Deep Space Black */
   --bg-card: rgba(255, 255, 255, 0.02);
   --bg-card-hover: rgba(255, 255, 255, 0.04);
-  
+
   --border-card: rgba(255, 255, 255, 0.05);
-  --border-card-glow: rgba(0, 102, 255, 0.25);
-  
-  --primary: #0066ff; /* Enterprise Stripe-style Blue */
-  --primary-glow: rgba(0, 102, 255, 0.35);
-  --primary-light: #00d9ff;
-  --primary-gradient: linear-gradient(135deg, #0066ff 0%, #00d9ff 100%);
-  
+  --border-card-glow: rgba(140, 255, 107, 0.25);
+
+  --primary: #63e04a; /* Deep neon green, tuned for text/icon contrast */
+  --primary-glow: rgba(140, 255, 107, 0.35);
+  --primary-light: #8cff6b; /* Pure HUD neon green from alvo-localizado.svg */
+  --primary-gradient: linear-gradient(135deg, #63e04a 0%, #8cff6b 100%);
+  --accent-amber: #ffc24b; /* HUD accent from alvo-localizado.svg */
+
   --text-main: #f9fafb;
   --text-muted: #adadad;
   --text-dark: #666666;
@@ -59,7 +60,7 @@ body {
 
 /* Selection style */
 ::selection {
-  background-color: rgba(0, 102, 255, 0.3);
+  background-color: rgba(140, 255, 107, 0.3);
   color: #ffffff;
 }
 

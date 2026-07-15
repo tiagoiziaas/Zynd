@@ -75,7 +75,7 @@
 }
 
 .footerLink:hover {
-  color: #00d9ff;
+  color: #8cff6b;
   padding-left: 2px;
 }
 
@@ -103,8 +103,8 @@
 }
 
 .newsletterForm:focus-within {
-  border-color: rgba(0, 102, 255, 0.4);
-  box-shadow: 0 0 10px rgba(0, 102, 255, 0.1);
+  border-color: rgba(99, 224, 74, 0.4);
+  box-shadow: 0 0 10px rgba(99, 224, 74, 0.1);
 }
 
 .newsletterInput {
@@ -121,7 +121,7 @@
   width: 36px;
   height: 36px;
   border-radius: var(--radius-xs);
-  background-color: #0066ff;
+  background-color: #63e04a;
   color: #ffffff;
   display: flex;
   align-items: center;

@@ -11,6 +11,7 @@ import Solutions from "@/components/Solutions/Solutions";
 import Differentials from "@/components/Differentials/Differentials";
 import Results from "@/components/Results/Results";
 import Process from "@/components/Process/Process";
+import About from "@/components/About/About";
 import Contact from "@/components/Contact/Contact";
 import Footer from "@/components/Footer/Footer";
 import Portfolio from "@/components/Portfolio/Portfolio";
@@ -86,6 +87,7 @@ export default function Home() {
             <Results />
             <Portfolio />
             <Process />
+            <About />
             <Contact />
           </main>
           <Footer />

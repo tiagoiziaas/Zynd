@@ -37,9 +37,10 @@ export default function Process() {
     target: targetRef,
   });
 
-  // Shift horizontal layout left as vertical scroll progresses
-  // -75% covers 4 slides of 25vw or card layout width
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-60%"]);
+  // Shift horizontal layout left as vertical scroll progresses.
+  // Tuned so the last card clears the viewport right around the end of the
+  // scroll range instead of finishing early and leaving "dead" scroll space.
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-32%"]);
 
   return (
     <section ref={targetRef} id="process" className={styles.scrollSection}>

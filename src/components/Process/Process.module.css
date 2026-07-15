@@ -1,6 +1,6 @@
 .scrollSection {
   position: relative;
-  height: 250vh; /* Determines length of horizontal scroll track */
+  height: 115vh; /* Determines length of horizontal scroll track */
   background-color: #030014;
   z-index: 5;
 }
@@ -31,7 +31,7 @@
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.2em;
-  color: #00d9ff;
+  color: #8cff6b;
   margin-bottom: 12px;
   text-transform: uppercase;
 }
@@ -86,7 +86,7 @@
 }
 
 .stepCard:hover {
-  border-color: rgba(0, 102, 255, 0.2);
+  border-color: rgba(99, 224, 74, 0.2);
 }
 
 .cardHeader {
@@ -100,15 +100,15 @@
   font-family: var(--font-mono);
   font-size: 1.85rem;
   font-weight: 700;
-  color: #00d9ff;
-  text-shadow: 0 0 10px rgba(0, 217, 255, 0.2);
+  color: #8cff6b;
+  text-shadow: 0 0 10px rgba(140, 255, 107, 0.2);
   line-height: 1;
 }
 
 .stepDivider {
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, rgba(0, 217, 255, 0.2) 0%, transparent 100%);
+  background: linear-gradient(90deg, rgba(140, 255, 107, 0.2) 0%, transparent 100%);
 }
 
 .stepTitle {
@@ -150,9 +150,9 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background-color: #0066ff;
+  background-color: #63e04a;
   flex-shrink: 0;
-  box-shadow: 0 0 4px #0066ff;
+  box-shadow: 0 0 4px #63e04a;
 }
 
 /* Responsive: Fallback to vertical flow on mobile Devices */

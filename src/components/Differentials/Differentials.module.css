@@ -47,8 +47,8 @@
 }
 
 .bgZynd {
-  background: linear-gradient(135deg, #0066ff 0%, #00d9ff 100%);
-  box-shadow: 0 0 10px rgba(0, 102, 255, 0.3);
+  background: linear-gradient(135deg, #63e04a 0%, #8cff6b 100%);
+  box-shadow: 0 0 10px rgba(99, 224, 74, 0.3);
 }
 
 .bgLegacy {
@@ -93,7 +93,7 @@
   justify-content: space-between;
   font-family: var(--font-mono);
   font-size: 0.68rem;
-  color: #00d9ff;
+  color: #8cff6b;
   font-weight: 700;
 }
 
@@ -116,9 +116,9 @@
 
 .barFillZynd {
   height: 100%;
-  background: linear-gradient(90deg, #0066ff 0%, #00d9ff 100%);
+  background: linear-gradient(90deg, #63e04a 0%, #8cff6b 100%);
   border-radius: 6px;
-  box-shadow: 0 0 8px rgba(0, 102, 255, 0.35);
+  box-shadow: 0 0 8px rgba(99, 224, 74, 0.35);
 }
 
 .barFillLegacy {
@@ -138,7 +138,7 @@
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.2em;
-  color: #00d9ff;
+  color: #8cff6b;
   margin-bottom: 16px;
   text-transform: uppercase;
 }

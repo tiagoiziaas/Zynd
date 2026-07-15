@@ -10,7 +10,7 @@ const SOLUTIONS = [
     desc: "Mapeamento algorítmico automático de processos corporativos. Descubra gargalos em tempo real analisando logs de eventos dos seus sistemas atuais.",
     svg: (
       <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.svgIllustration}>
-        <rect x="4" y="6" width="14" height="14" rx="3" stroke="#0066ff" strokeWidth="2.5" />
+        <rect x="4" y="6" width="14" height="14" rx="3" stroke="#63e04a" strokeWidth="2.5" />
         <rect x="42" y="6" width="14" height="14" rx="3" stroke="#adadad" strokeWidth="2" />
         <rect x="23" y="38" width="14" height="14" rx="3" stroke="#adadad" strokeWidth="2" />
         {/* Animated Connecting Paths */}
@@ -18,12 +18,12 @@ const SOLUTIONS = [
         <path d="M11 20 V45 H23" stroke="url(#lineGrad2)" strokeWidth="2" strokeDasharray="6 4" className={styles.flowPath2} />
         <defs>
           <linearGradient id="lineGrad1" x1="18" y1="13" x2="42" y2="13" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#0066ff" />
-            <stop offset="100%" stopColor="#00d9ff" />
+            <stop offset="0%" stopColor="#63e04a" />
+            <stop offset="100%" stopColor="#8cff6b" />
           </linearGradient>
           <linearGradient id="lineGrad2" x1="11" y1="20" x2="23" y2="45" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#0066ff" />
-            <stop offset="100%" stopColor="#00d9ff" />
+            <stop offset="0%" stopColor="#63e04a" />
+            <stop offset="100%" stopColor="#8cff6b" />
           </linearGradient>
         </defs>
       </svg>
@@ -34,9 +34,9 @@ const SOLUTIONS = [
     desc: "Robôs inteligentes equipados com Visão Computacional e Processamento de Linguagem Natural (NLP) para ler relatórios, validar documentos e responder e-mails.",
     svg: (
       <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.svgIllustration}>
-        <circle cx="30" cy="30" r="14" stroke="#0066ff" strokeWidth="2.5" />
+        <circle cx="30" cy="30" r="14" stroke="#63e04a" strokeWidth="2.5" />
         {/* Inner scanning ring */}
-        <circle cx="30" cy="30" r="8" stroke="#00d9ff" strokeWidth="1.5" strokeDasharray="4 2" className={styles.scanningRing} />
+        <circle cx="30" cy="30" r="8" stroke="#8cff6b" strokeWidth="1.5" strokeDasharray="4 2" className={styles.scanningRing} />
         {/* Outer Tech Shapes */}
         <path d="M10 10 L18 10 V18" stroke="#adadad" strokeWidth="2" />
         <path d="M50 10 L42 10 V18" stroke="#adadad" strokeWidth="2" />
@@ -50,7 +50,7 @@ const SOLUTIONS = [
     desc: "Sincronize múltiplos agentes de IA de forma centralizada. Garanta que tarefas fluam entre setores de compras, financeiro e RH com auditoria transparente.",
     svg: (
       <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.svgIllustration}>
-        <circle cx="30" cy="14" r="6" stroke="#0066ff" strokeWidth="2.5" />
+        <circle cx="30" cy="14" r="6" stroke="#63e04a" strokeWidth="2.5" />
         <circle cx="16" cy="42" r="6" stroke="#adadad" strokeWidth="2" />
         <circle cx="44" cy="42" r="6" stroke="#adadad" strokeWidth="2" />
         {/* Connectors */}
@@ -58,12 +58,12 @@ const SOLUTIONS = [
         <line x1="34" y1="19" x2="41" y2="37" stroke="url(#nodeGrad2)" strokeWidth="2" className={styles.nodeLine2} />
         <defs>
           <linearGradient id="nodeGrad1" x1="26" y1="19" x2="19" y2="37" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#0066ff" />
-            <stop offset="100%" stopColor="#00d9ff" />
+            <stop offset="0%" stopColor="#63e04a" />
+            <stop offset="100%" stopColor="#8cff6b" />
           </linearGradient>
           <linearGradient id="nodeGrad2" x1="34" y1="19" x2="41" y2="37" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stopColor="#0066ff" />
-            <stop offset="100%" stopColor="#00d9ff" />
+            <stop offset="0%" stopColor="#63e04a" />
+            <stop offset="100%" stopColor="#8cff6b" />
           </linearGradient>
         </defs>
       </svg>
@@ -76,10 +76,10 @@ const SOLUTIONS = [
       <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.svgIllustration}>
         <path d="M12 20 H48" stroke="#adadad" strokeWidth="2" strokeLinecap="round" />
         <path d="M12 40 H48" stroke="#adadad" strokeWidth="2" strokeLinecap="round" />
-        <path d="M22 10 L38 50" stroke="#0066ff" strokeWidth="2.5" strokeLinecap="round" className={styles.slashLine} />
+        <path d="M22 10 L38 50" stroke="#63e04a" strokeWidth="2.5" strokeLinecap="round" className={styles.slashLine} />
         {/* Glow dots */}
-        <circle cx="22" cy="20" r="3" fill="#00d9ff" className={styles.glowDot1} />
-        <circle cx="38" cy="40" r="3" fill="#00d9ff" className={styles.glowDot2} />
+        <circle cx="22" cy="20" r="3" fill="#8cff6b" className={styles.glowDot1} />
+        <circle cx="38" cy="40" r="3" fill="#8cff6b" className={styles.glowDot2} />
       </svg>
     )
   }

@@ -97,7 +97,7 @@ export default function ProjectCard({ project, featured = false, index }: Projec
       <motion.div
         className={styles.mouseGlow}
         style={{
-          background: `radial-gradient(400px circle at ${glowX}% ${glowY}%, rgba(0,102,255,0.12), transparent 70%)`,
+          background: `radial-gradient(400px circle at ${glowX}% ${glowY}%, rgba(99, 224, 74,0.12), transparent 70%)`,
         }}
       />
 

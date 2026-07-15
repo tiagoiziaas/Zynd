@@ -13,6 +13,7 @@ const NAV_ITEMS = [
   { id: "results", label: "Resultados" },
   { id: "portfolio", label: "Portfólio" },
   { id: "process", label: "Processo" },
+  { id: "about", label: "Sobre" },
 ];
 
 export default function Navbar() {
@@ -93,8 +94,8 @@ export default function Navbar() {
               <path d="M30 35 H70 L30 65 H70" stroke="#ffffff" strokeWidth="12" strokeLinecap="round" strokeLinejoin="round" />
               <defs>
                 <linearGradient id="navLogoGradient" x1="0" y1="0" x2="100" y2="100">
-                  <stop offset="0%" stopColor="#0066ff" />
-                  <stop offset="100%" stopColor="#00d9ff" />
+                  <stop offset="0%" stopColor="#63e04a" />
+                  <stop offset="100%" stopColor="#8cff6b" />
                 </linearGradient>
               </defs>
             </svg>

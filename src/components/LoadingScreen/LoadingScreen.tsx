@@ -118,8 +118,8 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
                 />
                 <defs>
                   <linearGradient id="logoGradient" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#0066ff" />
-                    <stop offset="100%" stopColor="#00d9ff" />
+                    <stop offset="0%" stopColor="#63e04a" />
+                    <stop offset="100%" stopColor="#8cff6b" />
                   </linearGradient>
                 </defs>
               </svg>
