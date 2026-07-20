@@ -25,6 +25,7 @@ export default function Portfolio() {
 
   const hasProjects = !loading && projects.length > 0;
   const isEmpty = !loading && projects.length === 0;
+  const useBento = projects.length >= 4;
 
   return (
     <section id="portfolio" ref={sectionRef} className={styles.section}>
@@ -79,20 +80,24 @@ export default function Portfolio() {
           </motion.div>
         )}
 
-        {/* Bento Grid */}
+        {/* Projects Grid */}
         {hasProjects && (
-          <div className={styles.bentoGrid}>
-            {projects.map((project, i) => (
-              <div
-                key={project.githubId}
-                className={`${styles.bentoItem} ${
-                  i === 0 ? styles.bentoLarge :
-                  i === 3 ? styles.bentoWide : ""
-                }`}
-              >
-                <ProjectCard project={project} featured={project.featured} index={i} />
-              </div>
-            ))}
+          <div className={useBento ? styles.bentoGrid : styles.compactGrid}>
+            {projects.map((project, i) =>
+              useBento ? (
+                <div
+                  key={project.githubId}
+                  className={`${styles.bentoItem} ${
+                    i === 0 ? styles.bentoLarge :
+                    i === 3 ? styles.bentoWide : ""
+                  }`}
+                >
+                  <ProjectCard project={project} featured={project.featured} index={i} />
+                </div>
+              ) : (
+                <ProjectCard key={project.githubId} project={project} featured={project.featured} index={i} />
+              )
+            )}
           </div>
         )}
 

@@ -88,6 +88,16 @@
   grid-column: span 2;
 }
 
+/* ─── Compact Grid (used when there aren't enough projects for the bento layout) ── */
+.compactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 360px));
+  grid-auto-rows: minmax(280px, auto);
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
 /* ─── Skeleton ────────────────────────────────────────────────── */
 .skeletonCard {
   background: linear-gradient(
@@ -188,5 +198,8 @@
   .bentoWide {
     grid-row: span 1;
     grid-column: span 1;
+  }
+  .compactGrid {
+    grid-template-columns: 1fr;
   }
 }
